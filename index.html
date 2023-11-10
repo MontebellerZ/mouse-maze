@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body onload="onLoadBody()">
+        <div id="controls">
+            <button id="start" onclick="startGame()">Iniciar</button>
+            <div id="dificulty">
+                <span class="controlSubtitle">Dificuldade</span>
+                <select id="dificultySelect" class="controlValue">
+                    <option value="10" label="1"></option>
+                    <option value="20" label="2"></option>
+                    <option value="30" label="3" selected></option>
+                    <option value="40" label="4"></option>
+                    <option value="50" label="5"></option>
+                    <option value="60" label="6"></option>
+                    <option value="70" label="7"></option>
+                    <option value="80" label="8"></option>
+                    <option value="90" label="9"></option>
+                    <option value="100" label="10"></option>
+                </select>
+            </div>
+            <div id="timer">
+                <span class="controlSubtitle">Tempo</span>
+                <span id="timeCount" class="controlValue">00:00</span>
+            </div>
+            <div id="moves">
+                <span class="controlSubtitle">Movimentos</span>
+                <span id="movesCount" class="controlValue">0</span>
+            </div>
+        </div>
+
+        <div id="space">
+            <div id="mazeHolder"></div>
+        </div>
+
+        <div id="arrows">
+            <div></div>
+            <button id="ArrowUp">↑</button>
+            <div></div>
+            <button id="ArrowLeft">←</button>
+            <div></div>
+            <button id="ArrowRight">→</button>
+            <div></div>
+            <button id="ArrowDown">↓</button>
+            <div></div>
+        </div>
+
+        <div id="confirmStartHolder">
+            <div id="confirmStart">
+                <span>Deseja iniciar uma nova partida?</span>
+
+                <div>
+                    <button onclick="cancelStart()" class="cancel">Não</button>
+                    <button onclick="confirmStart()" class="confirm">Sim</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="winHolder">
+            <div id="win">
+                <span class="title">Incrível!</span>
+
+                <div class="results">
+                    <span>Tempo total</span>
+                    <span id="totalTime">0</span>
+                </div>
+
+                <div class="results">
+                    <span>Movimentos</span>
+                    <span id="totalMoves">0</span>
+                </div>
+
+                <span>Deseja iniciar uma nova partida?</span>
+
+                <div class="buttons">
+                    <button onclick="cancelStart()" class="cancel">Não</button>
+                    <button onclick="confirmStart()" class="confirm">Sim</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
